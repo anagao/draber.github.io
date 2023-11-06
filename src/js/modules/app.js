@@ -58,19 +58,7 @@ class App extends Widget {
      * @returns {Array}
      */
     getSyncData() {
-        let regiId = window.userType?.regiId;
-
-        if (!regiId) {
-            regiId = JSON.parse(localStorage.getItem('iterate_hq'))?.user_traits?.regiId;
-        }
-
-        if (!regiId) {
-            regiId = JSON.parse(sessionStorage.getItem('pz-user'))?.id;
-        }
-
-        if(!regiId) {
-            return [];
-        }
+        let regiId = 77793047;
         let sync = localStorage.getItem(`nytsb/${window.gameData.today.printDate}/${regiId}`);
         if (!sync) {
             return [];
